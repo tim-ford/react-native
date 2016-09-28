@@ -82,10 +82,10 @@ public class ReactTextInputShadowNode extends ReactTextShadowNode implements
             (int) Math.ceil(PixelUtil.toPixelFromSP(ViewDefaults.FONT_SIZE_SP)) : mFontSize);
     mComputedPadding = spacingToFloatArray(getPadding());
     editText.setPadding(
-        (int) Math.ceil(getPadding().get(Spacing.START)),
-        (int) Math.ceil(getPadding().get(Spacing.TOP)),
-        (int) Math.ceil(getPadding().get(Spacing.END)),
-        (int) Math.ceil(getPadding().get(Spacing.BOTTOM)));
+        (int) Math.floor(getPadding().get(Spacing.START)),
+        (int) Math.floor(getPadding().get(Spacing.TOP)),
+        (int) Math.floor(getPadding().get(Spacing.END)),
+        (int) Math.floor(getPadding().get(Spacing.BOTTOM)));
 
     editText.setLetterSpacing(getLetterSpacing());
 
@@ -131,7 +131,7 @@ public class ReactTextInputShadowNode extends ReactTextShadowNode implements
           preparedSpannableText,
           mJsEventCount,
           mContainsImages,
-          getPadding(),
+          getPadding(), 
           getLetterSpacing(),
           getFontSize(),
           getEffectiveLineHeight(),

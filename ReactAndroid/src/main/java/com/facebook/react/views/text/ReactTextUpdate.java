@@ -10,7 +10,6 @@
 package com.facebook.react.views.text;
 
 import android.text.Spannable;
-import android.view.Gravity;
 
 import com.facebook.csslayout.Spacing;
 
